@@ -1,0 +1,11 @@
+Steps I took to push to GitHub
+
+- Created a new repository on Github 'basic_repo'
+- created a local repository on GitHub as well 'basic_repo'
+- added 4 html files to local 'basic_repo'
+- linked the files together using the commands below
+  git remote add origin https://github.com/<github username>/<github repo name>.git
+  git push origin master
+- verify they made it to repository
+- drag another file into local 'basic_repo'
+- git add, git commit, git push
