@@ -1,0 +1,88 @@
+Creating a repository:
+
+mkdir new_project
+cd new_project
+git init <<initializes the new repository you created 'new_project'
+
+---
+Changing the state of the repository to staged:
+
+git add index.html <<index.html is the file within new_project that you are staging for upload
+
+git add . <<adds all changed files in the repository to the staging area
+
+---
+Take a snapshot of all the staged files:
+
+git commit -m "index.html added" <<the quotations is where you can add context to what you updated. From here index.html is considered committed
+
+---
+To see the list of commits:
+
+git log <<give you a list of all your commits and the messages you put in
+
+---
+See the state our files are in:
+
+git status <<when you change a file, it's status moves to modified again
+
+---
+Creating a new branch:
+
+git branch new_feature master <<command to run to create a branch called new_feature from our master branch
+
+git checkout new_feature <<makes the new branch the current branch
+
+-or- git checkout -b new_feature <<the hi-speed way of creating a new branch and making it your current branch. Same as above, but in one step
+
+---
+Seeing all existing branches:
+
+git branch
+
+---
+Switching to a new branch:
+
+git checkout <branch name>
+
+---
+Merging branches:
+
+git checkout master <<switches you to the master branch from the repository you were working on
+
+git merge new_feature <<takes the name of the branch you want to merge (new_feature) into your current branch.
+
+---
+Pushing to GitHub
+
+git remote add origin <url> <<origin refers to the GitHub repository
+git push origin master << refers to our local repository
+
+---
+See all the remote repositories you're connected to
+
+git remote
+
+---
+See the information on a remote repository
+
+git remote show
+
+---
+Cloning a repository
+
+git clone <URL of repository> <<creates a local repository from one forked over from your GitHub
+
+---
+Fetching/Pulling
+
+git fetch origin master <<done when fetching from your GitHUb repository
+
+git fetch upstream master <<done when fetching from the original GitHub repository
+
+*fetching needs to be followed by a merge //ask Jay what were merging into
+
+---
+Pushing
+
+git push origin master <<pushes your code from your local repository to your remote repository
