@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Sortable Ninja</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+		<script   src="http://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+		<script   src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+		<style>
+  #draggable { text-decoration:none;}
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	<script>
+  $( function() {
+    $( "#sortable" ).sortable({
+      revert: true
+    });
+    $( "#draggable" ).draggable({
+      connectToSortable: "#sortable",
+      helper: "clone",
+      revert: "invalid"
+    });
+    $( "ul, li" ).disableSelection();
+  } );
+  </script>
+  </head>
+  <body>
+		<ul id="sortable">
+		  <li class="ui-state-default"><img src="sort1.png"></li>
+		  <li class="ui-state-default"><img src="sort2.png"></li>
+		  <li class="ui-state-default"><img src="sort3.png"></li>
+		  <li class="ui-state-default"><img src="sort4.png"></li>
+		  <li class="ui-state-default"><img src="sort5.png"></li>
+		</ul>
+  </body>
+</html>
