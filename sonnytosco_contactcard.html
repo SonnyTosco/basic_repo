@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>jQuery Intermediate Exercise 1a</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+      console.log("g2g");
+      $("form").submit(function(){
+        var fname=$("input.fname").val()
+        var lname=$("input.lname").val()
+        var description=$("textarea.description").val()
+
+        $("#rightcol").append(
+          "<div><h1>" + fname + " " + lname + "</h1><p>Click for Description</p><p class='hidden'>" +description+ "</p></div>"
+        )
+        return false;
+      });
+      $(document).on('click', '#rightcol div', function(){
+        $(this).children("p").slideToggle();
+      });
+    });
+    </script>
+    <style>
+    #description{
+      height:100px;
+      width:200px;
+    }
+    #rightcol{
+      display:inline-block;
+      height:200px;
+      width:200px;
+      background-color:yellow;
+    }
+    #body{
+      display: inline-block;
+    }
+    .hidden{
+      display: none;
+    }
+    </style>
+	</head>
+	<body>
+    <div id="info">
+      <form>
+        <input class="fname" type="text" placeholder="First Name Greatest" /><br><br>
+        <input class="lname" type="text" placeholder="Last Name Eva" /><br><br>
+        <textarea class="description"></textarea>
+        <input type="submit" value="Add User" />
+      </form>
+    <div id="rightcol">
+    </div>
+    </div>
+  </body>
+</html>
